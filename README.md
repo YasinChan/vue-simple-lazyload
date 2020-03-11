@@ -3,14 +3,15 @@
 A pure lazyload plugin for vue or nuxt
 
 ## Usage
-### main.js
+### Vue
+#### main.js
 ```
 import Vue from 'vue'
 import Lazy from 'vue-simple-lazyload'
 
 Vue.use(Lazy)
 ```
-### template
+#### template
 1. use `v-lazy:backgroundImage`
 
 2. use `v-lazy`
@@ -37,3 +38,22 @@ lazyload-img {
 }
 ```
 > store `placeholderFigure` required before img onload
+
+-------
+### nuxt
+~/plugins/lazyload.js
+```
+import Vue from 'vue'
+import Lazy from 'vue-simple-lazyload'
+
+Vue.use(Lazy)
+```
+nuxt.config.js
+```
+...
+ plugins: [
+   { src: '~/plugins/lazyLoad', mode: 'client' }
+ ],
+...
+```
+## TODO
