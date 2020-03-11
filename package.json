@@ -1,0 +1,8 @@
+{
+  "name": "vue-simple-lazyload",
+  "version": "1.0.0",
+  "description": "A simple lazyload plugin for vue or nuxt",
+  "main": "index.js",
+  "author": "陈耀耀 <yasinchan2016@gmail.com>",
+  "license": "MIT"
+}
