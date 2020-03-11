@@ -23,8 +23,8 @@ Vue.use(Lazy)
     <img alt="" :src="$store.state.placeholderFigure" class="lazyload-img" />
 </div>
 ```
-> `$imgUrl``$bgColor` required
-> class `lazyload-container``lazyload-img` required
+> `$imgUrl` `$bgColor` required
+> class `lazyload-container` `lazyload-img` required
 
 demo
 ```
