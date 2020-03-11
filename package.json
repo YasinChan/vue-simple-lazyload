@@ -3,6 +3,21 @@
   "version": "1.0.0",
   "description": "A simple lazyload plugin for vue or nuxt",
   "main": "index.js",
+  "scripts": {
+    "build": "rollup -c rollup.config.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/YasinChan/vue-simple-lazyload.git"
+  },
   "author": "陈耀耀 <yasinchan2016@gmail.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "babel-core": "6",
+    "babel-plugin-external-helpers": "^6.22.0",
+    "babel-preset-env": "^1.7.0",
+    "rollup": "^2.0.3",
+    "rollup-plugin-babel": "3",
+    "vue": "^2.6.11"
+  }
 }
