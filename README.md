@@ -3,6 +3,11 @@
 A pure lazyload plugin for vue or nuxt
 
 ## Usage
+```
+$ yarn add vue-simple-lazyload -S
+// or
+$ npm i vue-simple-lazyload -S
+```
 ### Vue
 #### main.js
 ```
