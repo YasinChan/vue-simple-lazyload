@@ -38,8 +38,8 @@ Vue.use(VueLazy, {
 </ImgLazy>
 ```
 2. directive
-  1. use `v-lazy:backgroundImage`
-  2. use `v-lazy`
+  - use `v-lazy:backgroundImage`
+  - use `v-lazy`
   ```
   <div v-lazy="$imgUrl"
       :style="{
