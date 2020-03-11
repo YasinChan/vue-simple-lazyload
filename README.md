@@ -1,28 +1,29 @@
-## vue-simple-lazyload
+# vue-simple-lazyload
 
 A pure lazyload plugin for vue or nuxt
 
-### Usage
-main.js
+## Usage
+### main.js
 ```
 import Vue from 'vue'
 import Lazy from 'vue-simple-lazyload'
 
 Vue.use(Lazy)
 ```
-template
+### template
 1. use `v-lazy:backgroundImage`
 
 2. use `v-lazy`
  ```
-<div v-lazy="$lodashGet(item, 'banner.medium_url')"
+<div v-lazy="$imgUrl"
     :style="{
-      backgroundColor: #fff
+      backgroundColor: $bgColor
     }"
     class="lazyload-container">
     <img alt="" :src="$store.state.placeholderFigure" class="lazyload-img" />
 </div>
 ```
+> `$imgUrl``$bgColor` required
 > class `lazyload-container``lazyload-img` required
 
 demo
