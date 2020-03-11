@@ -57,3 +57,4 @@ nuxt.config.js
 ...
 ```
 ## TODO
+1. Add nuxt modules
