@@ -25,6 +25,7 @@ Vue.use(Lazy)
 </div>
 ```
 > `$imgUrl` `$bgColor` required
+
 > class `lazyload-container` `lazyload-img` required
 
 demo
