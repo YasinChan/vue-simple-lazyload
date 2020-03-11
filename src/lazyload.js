@@ -1,18 +1,18 @@
-const DEFAULT_OBSERVER_OPTIONS = {
+const DEFAULTobserver_OPTIONS = {
   rootMargin: '0px',
   threshold: 0
 }
 class Lazy {
-  constructor(Vue) {
+  constructor(Vue, options) {
     this.vue = Vue
-    this._observer = null
+    this.observer = null
     this.ListenerQueue = []
-    this.observerOptions = DEFAULT_OBSERVER_OPTIONS
+    this.observerOptions = options || DEFAULTobserver_OPTIONS
     this.init()
   }
   init() {
-    this._observer = new IntersectionObserver(
-      this._observerHandler.bind(this),
+    this.observer = new IntersectionObserver(
+      this.observerHandler.bind(this),
       this.observerOptions
     )
   }
@@ -24,16 +24,16 @@ class Lazy {
       vnode
     })
     this.vue.nextTick(() => {
-      this._observer && this._observer.observe(el)
+      this.observer && this.observer.observe(el)
     })
   }
-  _observerHandler(entries, observer) {
+  observerHandler(entries, observer) {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
         this.ListenerQueue.forEach((listener) => {
           if (listener.el === entry.target) {
             if (listener.loaded) {
-              return this._observer.unobserve(listener.el)
+              return this.observer.unobserve(listener.el)
             }
             listener.loaded = true
 

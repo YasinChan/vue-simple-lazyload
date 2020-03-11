@@ -1,4 +1,5 @@
 import babel from 'rollup-plugin-babel';
+import VuePlugin from 'rollup-plugin-vue'
 
 export default {
   input: 'src/main.js',
@@ -7,6 +8,7 @@ export default {
     format: 'cjs'
   },
   plugins: [
+    VuePlugin(),
     babel({
       exclude: 'node_modules/**' // 只编译我们的源代码
     })
