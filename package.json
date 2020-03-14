@@ -13,11 +13,11 @@
   "author": "陈耀耀 <yasinchan2016@gmail.com>",
   "license": "MIT",
   "devDependencies": {
-    "babel-core": "6",
-    "babel-plugin-external-helpers": "^6.22.0",
-    "babel-preset-env": "^1.7.0",
+    "@babel/core": "^7.8.7",
+    "@babel/preset-env": "^7.8.7",
     "rollup": "^2.0.3",
-    "rollup-plugin-babel": "3",
+    "rollup-plugin-babel": "^4.4.0",
+    "rollup-plugin-commonjs": "^10.1.0",
     "rollup-plugin-vue": "^5.1.6",
     "vue": "^2.6.11",
     "vue-template-compiler": "^2.6.11"

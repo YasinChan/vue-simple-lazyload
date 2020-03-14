@@ -1,86 +1,149 @@
 # vue-simple-lazyload
 
-A pure lazyload plugin for vue or nuxt
+> A pure lazyload plugin for vue or nuxt
+
+## demo
+[demo](http://git.yasinchan.com/vue-simple-lazyload/dist/)
 
 ## Usage
+
 ```
 $ yarn add vue-simple-lazyload -S
 // or
 $ npm i vue-simple-lazyload -S
 ```
-### Vue
-#### main.js
+
 > options [Intersection_Observer_API](https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API)
 
 > eg. `rootMargin: '50px'` can preload img before 50px
-1. component
-```
-import { VueImgLazy } from 'vue-simple-lazyload'
 
-Vue.use(VueImgLazy, {
-  rootMargin: '50px'
-})
-```
+### Vue
 
-2. directive
-```
-import Vue from 'vue'
-import { VueLazy } from 'vue-simple-lazyload'
+#### Component
 
-Vue.use(VueLazy, {
-  rootMargin: '50px'
-})
-```
-#### template
-1. compoennt
-```
-<ImgLazy :imgUrl="$imgUrl" :bgColor="$bgColor">
-</ImgLazy>
-```
-2. directive
-  - use `v-lazy:backgroundImage`
-  - use `v-lazy`
-  ```
-  <div v-lazy="$imgUrl"
-      :style="{
-        backgroundColor: $bgColor
-      }"
-      class="lazyload-container">
-      <img alt="" :src="$store.state.placeholderFigure" class="lazyload-img" />
-  </div>
-  ```
-  > `$imgUrl` `$bgColor` required
+1. main.js
 
-  > class `lazyload-container` `lazyload-img` required
+   ```
+   import Vue from 'vue'
+   import { VueImgLazy } from 'vue-simple-lazyload'
+   
+   Vue.use(VueImgLazy, {
+     rootMargin: '50px'
+   })
+   ```
+2. template
 
-  demo
-  ```
-  .lazyload-container {
-    transition: background-color .5s ease-in-out .3s;
-  }
-  lazyload-img {
-    transition: opacity .5s ease-in-out .3s;
-    opacity: 0;
-  }
-  ```
-  > store `placeholderFigure` required before img onload
+   ```
+   <ImgLazy :imgUrl="" :bgColor="" :lazyloadContainer="" :lazyloadImg="" :placeholderFigure=""></ImgLazy>
+   ```
+3. Props
+
+    | Props             | Description       | Default                     | Opt/Required |
+    | ----------------- | ----------------- | --------------------------- | ------------ |
+    | imgUrl            | Image url         | ''                          | Required     |
+    | bgColor           | Background color  | ''                          | Optional     |
+    | lazyloadContainer | Container class   | '' // has default style     | Optional     |
+    | lazyloadImg       | Image Class       | '' // has default style     | Optional     |
+    | placeholderFigure | Placeholder image | A base64 transparent figure | Optional     |
+
+
+
+#### Directive
+##### v-lazy
+1. main.js
+   ```
+   import Vue from 'vue'
+   import { VueLazy } from 'vue-simple-lazyload'
+   
+   Vue.use(VueLazy, {
+     rootMargin: '50px'
+   })
+   ```
+2. template
+   ```
+   <div v-lazy="$imgUrl"
+       :style="{
+         backgroundColor: $bgColor
+       }"
+       class="lazyload-container">
+       <img :src="$placeholderFigure" class="lazyload-img" />
+   </div>
+   
+   // css. This is also the default style of the VueImgLazy component 
+   .lazyload-container {
+     transition: background-color .5s ease-in-out .3s;
+     width: 400px;
+     height: 200px;
+   }
+   .lazyload-img  {
+     transition: opacity .5s ease-in-out .3s;
+     opacity: 0;
+     width: 100%;
+     height: 100%;
+   }
+   ```
+##### v-lazy:bgimg
+
+1. main.js
+   ```
+   import Vue from 'vue'
+   import { VueLazy } from 'vue-simple-lazyload'
+   
+   Vue.use(VueLazy, {
+     rootMargin: '50px'
+   })
+   ```
+2. template
+   ```
+   <div v-lazy:bgimg="$imgUrl"
+       :style="{
+         backgroundColor: $bgColor
+       }"
+       class="lazyload-container">
+   </div>
+   
+   // css. This is also the default style of the VueImgLazy component 
+   .lazyload-container {
+     transition: background-color .5s ease-in-out .3s;
+     width: 400px;
+     height: 200px;
+   }
+   ```
+
 
 -------
-### nuxt
-~/plugins/lazyload.js
-```
-import Vue from 'vue'
-import Lazy from 'vue-simple-lazyload'
 
-Vue.use(Lazy)
-```
-nuxt.config.js
-```
-...
- plugins: [
-   { src: '~/plugins/lazyLoad', mode: 'client' }
- ],
-...
-```
+### nuxt
+
+1. ~/plugins/lazyload.js
+
+   ```
+   import Vue from 'vue'
+   import { VueLazy, VueImgLazy } from 'vue-simple-lazyload'
+   
+   Vue.use(VueLazy, {
+     rootMargin: '50px'
+   })
+   // or
+   Vue.use(VueImgLazy, {
+     rootMargin: '50px'
+   })
+   ```
+
+2. nuxt.config.js
+
+   ```
+   ...
+    plugins: [
+      { src: '~/plugins/lazyLoad', mode: 'client' }
+    ],
+   ...
+   ```
+ 
+## Required
+> This project base on [Intersection_Observer_API](https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API). Need import polyfill.
+   
+
 ## TODO
+
 1. Add nuxt modules

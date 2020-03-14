@@ -1,4 +1,3 @@
-import Vue from 'vue'
 import Lazy from './lazyload'
 import ImgLazy from './ImgLazy.vue'
 

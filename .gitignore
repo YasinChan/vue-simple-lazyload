@@ -9,7 +9,7 @@ node_modules
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
-yarn-lock.log*
+yarn.lock*
 
 # Editor directories and files
 .idea
@@ -23,4 +23,5 @@ yarn-lock.log*
 npm-debug.log
 package-lock.json
 
-deploy.sh
+dist
+demo

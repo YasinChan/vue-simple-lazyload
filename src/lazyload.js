@@ -1,4 +1,4 @@
-const DEFAULTobserver_OPTIONS = {
+const DEFAULT_OBSERVER_OPTIONS = {
   rootMargin: '0px',
   threshold: 0
 }
@@ -7,7 +7,7 @@ class Lazy {
     this.vue = Vue
     this.observer = null
     this.ListenerQueue = []
-    this.observerOptions = options || DEFAULTobserver_OPTIONS
+    this.observerOptions = options || DEFAULT_OBSERVER_OPTIONS
     this.init()
   }
   init() {
@@ -39,7 +39,7 @@ class Lazy {
 
             const image = new Image()
             image.src = listener.binding.value
-            if (listener.binding.arg === 'backgroundImage') {
+            if (listener.binding.arg === 'bgimg') {
               image.onload = function() {
                 listener.el.style.backgroundImage = `url(${listener.binding.value})`
                 listener.el.style.opacity = 1

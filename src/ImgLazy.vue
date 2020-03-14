@@ -1,10 +1,9 @@
 <template>
-  <div v-lazy="imgUrl" :style="{ backgroundColor: bgColor }">
-    <img :src="placeholderFigure"/>
+  <div :class="lazyloadContainer" v-lazy="imgUrl" :style="{ backgroundColor: bgColor }">
+    <img :class="lazyloadImg"/>
   </div>
 </template>
 <script>
-import Lazy from './lazyload'
 
 export default {
   name: 'ImgLazy',
@@ -14,13 +13,18 @@ export default {
       type: String
     },
     bgColor: {
-      default: '#fff',
+      default: ''
+    },
+    lazyloadContainer: {
+      default: '',
       type: String
-    }
-  },
-  data() {
-    return {
-      placeholderFigure: 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR4nGP6zwAAAgcBApocMXEAAAAASUVORK5CYII='
+    },
+    lazyloadImg: {
+      default: '',
+      type: String
+    },
+    placeholderFigure: {
+      default: 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR4nGP6zwAAAgcBApocMXEAAAAASUVORK5CYII='
     }
   }
 }
@@ -28,9 +32,13 @@ export default {
 <style scoped>
 div {
   transition: background-color .5s ease-in-out .3s;
+  width: 250px;
+  height: 150px;
 }
 img {
   transition: opacity .5s ease-in-out .3s;
   opacity: 0;
+  width: 100%;
+  height: 100%;
 }
 </style>
