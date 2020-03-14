@@ -2,8 +2,8 @@
 
 > A pure lazyload plugin for vue or nuxt
 
-## demo
-[demo](http://git.yasinchan.com/vue-simple-lazyload/dist/)
+## Demo
+**[demo](http://git.yasinchan.com/vue-simple-lazyload/dist/)**
 
 ## Usage
 
@@ -23,7 +23,7 @@ $ npm i vue-simple-lazyload -S
 
 1. main.js
 
-   ```
+   ```js
    import Vue from 'vue'
    import { VueImgLazy } from 'vue-simple-lazyload'
    
@@ -33,7 +33,7 @@ $ npm i vue-simple-lazyload -S
    ```
 2. template
 
-   ```
+   ```html
    <ImgLazy :imgUrl="" :bgColor="" :lazyloadContainer="" :lazyloadImg="" :placeholderFigure=""></ImgLazy>
    ```
 3. Props
@@ -51,7 +51,7 @@ $ npm i vue-simple-lazyload -S
 #### Directive
 ##### v-lazy
 1. main.js
-   ```
+   ```js
    import Vue from 'vue'
    import { VueLazy } from 'vue-simple-lazyload'
    
@@ -60,7 +60,7 @@ $ npm i vue-simple-lazyload -S
    })
    ```
 2. template
-   ```
+   ```css
    <div v-lazy="$imgUrl"
        :style="{
          backgroundColor: $bgColor
@@ -69,7 +69,7 @@ $ npm i vue-simple-lazyload -S
        <img :src="$placeholderFigure" class="lazyload-img" />
    </div>
    
-   // css. This is also the default style of the VueImgLazy component 
+   /*css. This is also the default style of the VueImgLazy component*/
    .lazyload-container {
      transition: background-color .5s ease-in-out .3s;
      width: 400px;
@@ -85,7 +85,7 @@ $ npm i vue-simple-lazyload -S
 ##### v-lazy:bgimg
 
 1. main.js
-   ```
+   ```js
    import Vue from 'vue'
    import { VueLazy } from 'vue-simple-lazyload'
    
@@ -94,7 +94,7 @@ $ npm i vue-simple-lazyload -S
    })
    ```
 2. template
-   ```
+   ```css
    <div v-lazy:bgimg="$imgUrl"
        :style="{
          backgroundColor: $bgColor
@@ -102,7 +102,7 @@ $ npm i vue-simple-lazyload -S
        class="lazyload-container">
    </div>
    
-   // css. This is also the default style of the VueImgLazy component 
+   /*css. This is also the default style of the VueImgLazy component*/
    .lazyload-container {
      transition: background-color .5s ease-in-out .3s;
      width: 400px;
@@ -117,7 +117,7 @@ $ npm i vue-simple-lazyload -S
 
 1. ~/plugins/lazyload.js
 
-   ```
+   ```js
    import Vue from 'vue'
    import { VueLazy, VueImgLazy } from 'vue-simple-lazyload'
    
@@ -132,7 +132,7 @@ $ npm i vue-simple-lazyload -S
 
 2. nuxt.config.js
 
-   ```
+   ```js
    ...
     plugins: [
       { src: '~/plugins/lazyLoad', mode: 'client' }
