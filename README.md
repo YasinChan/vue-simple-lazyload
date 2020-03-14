@@ -3,7 +3,7 @@
 > A pure lazyload plugin for vue or nuxt
 
 ## Demo
-**[demo](http://git.yasinchan.com/vue-simple-lazyload/dist/)**
+**[demo](https://git.yasinchan.com/vue-simple-lazyload/dist/)**
 
 ## Usage
 
