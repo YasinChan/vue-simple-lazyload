@@ -21,3 +21,5 @@ yarn-error.log*
 
 npm-debug.log
 package-lock.json
+
+deploy.sh
