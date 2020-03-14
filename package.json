@@ -1,6 +1,6 @@
 {
   "name": "vue-simple-lazyload",
-  "version": "1.0.7",
+  "version": "1.21.1",
   "description": "A simple lazyload plugin for vue or nuxt",
   "main": "index.js",
   "scripts": {
