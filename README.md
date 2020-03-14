@@ -2,6 +2,9 @@
 
 > A pure lazyload plugin for vue or nuxt
 
+## Support
+> `<img src="" />` && `background-image: url();`
+
 ## Demo
 **[demo](https://git.yasinchan.com/vue-simple-lazyload/dist/)**
 
@@ -49,7 +52,7 @@ $ npm i vue-simple-lazyload -S
 
 
 #### Directive
-##### v-lazy
+##### v-lazy (for `<img src="" />`)
 1. main.js
    ```js
    import Vue from 'vue'
@@ -82,7 +85,7 @@ $ npm i vue-simple-lazyload -S
      height: 100%;
    }
    ```
-##### v-lazy:bgimg
+##### v-lazy:bgimg (for `background-image: url();`)
 
 1. main.js
    ```js
