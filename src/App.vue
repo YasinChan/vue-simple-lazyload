@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <h1>vue-simple-lazyload</h1>
-    <a href="https://github.com/YasinChan/vue-simple-lazyload/tree/gh-pages">This demo source code</a>
+    <a href="https://github.com/YasinChan/vue-simple-lazyload/tree/gh-pages">Source code</a>
     <div class="wrap">
       <div class="flex">
         <h2>Component</h2>
@@ -28,6 +28,7 @@
         </div>
       </div>
     </div>
+    <p>Pictures from <a href="https://source.unsplash.com/">Unsplash Source</a></p>
   </div>
 </template>
 
@@ -215,9 +216,12 @@
     margin: 0 auto;
   }
   a {
-    color: #666;
+    color: #409eff;
     font-size: 18px;
     font-weight: bold;
+  }
+  p {
+    margin: 60px 0 40px;
   }
   .code-wrap {
     height: 500px;
