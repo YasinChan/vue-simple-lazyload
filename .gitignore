@@ -23,5 +23,5 @@ yarn.lock*
 npm-debug.log
 package-lock.json
 
-dist
 demo
+deploy.sh
