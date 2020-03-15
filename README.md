@@ -1,29 +1,7 @@
 # demo
 
-## Project setup
-```
-yarn install
-```
+> [demo](https://git.yasinchan.com/vue-simple-lazyload/dist/)
 
-### Compiles and hot-reloads for development
-```
-yarn run serve
-```
+> [master](https://github.com/YasinChan/vue-simple-lazyload/tree/master)
 
-### Compiles and minifies for production
-```
-yarn run build
-```
-
-### Run your tests
-```
-yarn run test
-```
-
-### Lints and fixes files
-```
-yarn run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+> [npm](https://www.npmjs.com/package/vue-simple-lazyload)
