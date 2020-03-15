@@ -5,8 +5,9 @@
 ## Support
 > `<img src="" />` && `background-image: url();`
 
-## Demo
+## Link
 **[demo](https://git.yasinchan.com/vue-simple-lazyload/dist/)**
+**[npm](https://www.npmjs.com/package/vue-simple-lazyload)**
 
 ## Usage
 
