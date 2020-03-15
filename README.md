@@ -145,7 +145,7 @@ $ npm i vue-simple-lazyload -S
    ```
  
 ## Required
-> This project base on [Intersection_Observer_API](https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API). Need import polyfill.
+> This project base on [Intersection_Observer_API](https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API). Need import polyfill if necessary.
    
 
 ## TODO
