@@ -37,21 +37,25 @@ class Lazy {
             }
             listener.loaded = true
 
-            const image = new Image()
-            image.src = listener.binding.value
             if (listener.binding.arg === 'bgimg') {
+              const image = new Image()
+              image.src = listener.binding.value
               image.onload = function() {
                 listener.el.style.backgroundImage = `url(${listener.binding.value})`
                 listener.el.style.opacity = 1
               }
-            } else {
-              image.onload = function() {
-                listener.el.style.backgroundColor = 'transparent'
-                const img = listener.el.querySelector('img')
-                img.src = listener.binding.value
-                img.style.opacity = 1
-              }
               image.onerror = function() {}
+            } else {
+              const img = listener.el.querySelector('img')
+              if (!img) {
+                throw 'Please make sure that you have set img html inside v-lazy directive. [more details] https://github.com/YasinChan/vue-simple-lazyload/blob/master/README.md'
+              }
+              img.onload = function() {
+                img.style.opacity = 1
+                listener.el.style.backgroundColor = 'transparent'
+              }
+              img.src = listener.binding.value
+              img.onerror = function() {}
             }
           }
         })
