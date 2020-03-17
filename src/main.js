@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import App from './App.vue'
-import { VueImgLazy, VueLazy } from '../../index'
+import { VueImgLazy, VueLazy } from '../../src/main'
 import VueHighlightJS from 'vue-highlightjs'
 
 Vue.use(VueHighlightJS)

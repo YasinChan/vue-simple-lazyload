@@ -231,6 +231,7 @@
     transition: background-color .5s ease-in-out .3s;
     width: 250px;
     height: 150px;
+    background-size: 100% 100%;
   }
   .lazyload-img  {
     transition: opacity .5s ease-in-out .3s;
