@@ -6,7 +6,8 @@ export const VueLazy = {
     const lazy = new Lazy(Vue, options)
 
     Vue.directive('lazy', {
-      bind: lazy.add.bind(lazy)
+      bind: lazy.add.bind(lazy),
+      update: lazy.add.bind(lazy)
     })
   }
 }
@@ -16,7 +17,8 @@ export const VueImgLazy = {
     const lazy = new Lazy(Vue, options)
 
     Vue.directive('lazy', {
-      bind: lazy.add.bind(lazy)
+      bind: lazy.add.bind(lazy),
+      update: lazy.add.bind(lazy)
     })
     Vue.component(ImgLazy.name, ImgLazy)
   }

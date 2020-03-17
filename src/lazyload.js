@@ -1,3 +1,4 @@
+import nanoId from 'nanoid'
 const DEFAULT_OBSERVER_OPTIONS = {
   rootMargin: '0px',
   threshold: 0
@@ -17,6 +18,7 @@ class Lazy {
     )
   }
   add(el, binding, vnode) {
+    vnode.key = nanoId(4)
     this.ListenerQueue.push({
       loaded: false,
       el,
@@ -24,7 +26,10 @@ class Lazy {
       vnode
     })
     this.vue.nextTick(() => {
-      this.observer && this.observer.observe(el)
+      if (this.observer) {
+        this.observer.unobserve(el)
+        this.observer.observe(el)
+      }
     })
   }
   observerHandler(entries, observer) {
@@ -46,6 +51,7 @@ class Lazy {
               }
               image.onerror = function() {}
             } else {
+              // debugger
               const img = listener.el.querySelector('img')
               if (!img) {
                 throw 'Please make sure that you have set img html inside v-lazy directive. [more details] https://github.com/YasinChan/vue-simple-lazyload/blob/master/README.md'
