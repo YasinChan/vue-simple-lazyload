@@ -1,4 +1,3 @@
-import nanoId from 'nanoid'
 const DEFAULT_OBSERVER_OPTIONS = {
   rootMargin: '0px',
   threshold: 0
@@ -18,7 +17,6 @@ class Lazy {
     )
   }
   add(el, binding, vnode) {
-    vnode.key = nanoId(4)
     this.ListenerQueue.push({
       loaded: false,
       el,
