@@ -1,13 +1,13 @@
 # vue-simple-lazyload
+[![vue-simple-lazyload](https://img.shields.io/badge/vue--simple--lazyload-1.1.3-brightgreen)](https://www.npmjs.com/package/vue-simple-lazyload)
 
 > A pure lazyload plugin for vue or nuxt
 
 ## Support
 > `<img src="" />` && `background-image: url();`
 
-## Link
+## Demo
 **[demo](https://git.yasinchan.com/vue-simple-lazyload/dist/)**
-**[npm](https://www.npmjs.com/package/vue-simple-lazyload)**
 
 ## Usage
 
